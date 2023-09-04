@@ -11,7 +11,7 @@ SImple app for beginers. To much to do staffs, excellent for building retrofit a
 -Simple animations included
 -Custom view(extended by layout)
 -Provided AndroidJUnit4 test
-
+-
 
 Source of questions downloaded from internet
 
