@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/fragmentStartGame">
+
+    <fragment
+        android:id="@+id/fragmentStartGame"
+        android:name="com.myapp.millionaire.ui.game.firstpage.StartGameFragment"
+        android:label="start_game_fragment"
+        tools:layout="@layout/fragment_start_game" >
+        <action
+            android:id="@+id/action_fragmentStartGame_to_fragmentGameMenu"
+            app:destination="@id/fragmentGameMenu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentGameMenu"
+        android:name="com.myapp.millionaire.ui.game.gamemenu.GameMenuFragment"
+        android:label="game_menu_fragment"
+        tools:layout="@layout/fragment_game_menu" >
+        <action
+            android:id="@+id/action_fragmentGameMenu_to_fragmentQuizSwicher"
+            app:destination="@id/fragmentQuizSwicher" />
+        <action
+            android:id="@+id/action_fragmentGameMenu_to_fragmentSettings"
+            app:destination="@id/fragmentSettings" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentQuizSwicher"
+        android:name="com.myapp.millionaire.ui.game.quiz.QuizSwicherFragment"
+        android:label="quiz_fragment"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_fragmentQuizSwicher_to_fragmentGameMenu"
+            app:destination="@id/fragmentGameMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSettings"
+        android:name="com.myapp.millionaire.ui.game.settings.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_fragmentSettings_to_fragmentGameMenu"
+            app:destination="@id/fragmentGameMenu" />
+    </fragment>
+</navigation>
